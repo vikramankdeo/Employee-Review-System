@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Reviews</title>
+  <link rel="stylesheet" href="/css/emp_home.css">
+  <%- style %>
+</head>
+
+<header>
+    <!-- Assuming the user's name is fetched dynamically -->
+    <span><%= locals.user.name %></span>
+    <a href="/sign-out">Sign Out</a>
+</header>
+
+<%- body %>
+
+<%- script %>
+</html>

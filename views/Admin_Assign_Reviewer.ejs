@@ -1,0 +1,37 @@
+<!-- EJS or HTML file structure -->
+<!-- EJS file structure -->
+<!DOCTYPE html>
+  <html>
+  <head>
+       <link rel="stylesheet" href="/css/admin_assign.css">
+  </head>
+  <body>
+<span>
+    <select id="empDropdown" onchange="enableCheckboxes()">
+        <option value="">Select a username</option>
+        <% employees.forEach((employee) => { %>
+          <option value="<%= employee._id %>"><%= employee.username %></option>
+        <% }); %>
+      </select>
+      
+      <div id="usernameDropdown">
+        <% employees.forEach((employee) => { %>
+          <label>
+            <input type="checkbox" value="<%= employee._id %>" disabled>
+            <%= employee.username %>
+          </label><br>
+        <% }); %>
+        <button onclick="getSelectedUsernames()">Assign</button>
+      </div>
+      
+
+  </span>
+  
+  <script src = "/js/admin_assign.js">
+    
+
+  </script>
+  </body>
+  </html>
+  
+  

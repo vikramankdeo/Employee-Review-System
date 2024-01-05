@@ -1,0 +1,29 @@
+<!-- employees.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Reviews</title>
+  <link rel="stylesheet" href="/css/emp_home.css">
+</head>
+<body>
+
+<hr>
+  <% employees.forEach(employee => { %>
+    <div class="employee" id = "<%=employee.id %>" >
+      <h3><%= employee.emp_id.name %></h3>
+      <select id="review_<%=employee.id %>">
+        <option value="">Select review</option>
+        <option value="great">Great</option>
+        <option value="good">Good</option>
+        <option value="average">Average</option>
+        <option value="bad">Bad</option>
+      </select>
+      <button onclick="submitReview('<%=employee.id %>')">Submit</button>
+    </div>
+  <% }); %>
+
+  <script src = "/js/emp_home.js"></script>
+</body>
+</html>

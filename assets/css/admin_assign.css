@@ -1,0 +1,44 @@
+/* Reset default margin and padding */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  /* Center and style the content */
+  span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Style for dropdown select */
+  #empDropdown {
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  /* Style for checkbox labels */
+  label {
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the 'Get Selected Usernames' button */
+  button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

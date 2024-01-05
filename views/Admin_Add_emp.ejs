@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="/css/admin_add_emp.css">
+  </head>
+  <body>
+    <form action="/Admin/Add-Employee/submit" method="post" class="employee-form">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" id="name" name="name" class="form-input" required><br><br>
+    
+      <label for="username" class="form-label">Username:</label>
+      <input type="text" id="username" name="username" class="form-input" required><br><br>
+    
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" id="password" name="password" class="form-input" required><br><br>
+    
+      <label for="confirmPassword" class="form-label">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" required><br><br>
+    
+      <div class="is-admin-checkbox">
+        <input type="checkbox" id="isAdmin" name="isAdmin">
+        <label for="isAdmin">Is Admin</label>
+      </div>
+      
+      <input type="submit" value="Submit" class="submit-button">
+    </form>
+  </body>
+  </html>
+  

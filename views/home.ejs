@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+<h1 class="heading">EMPLOYEE REVIEW SYSTEM</h1>
+  <div class="container">
+    <form action="/Employee/sign-in/home" method="get" class="sign-in-form">  
+      <h1>Sign In</h1>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br><br>
+    
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+    
+      <input type="submit" value="Sign In">
+    </form>
+    <button class="sign-up-button" id="signUpButton">Sign Up</button>
+  </div>
+  <script src="/js/home.js"></script>
+</body>
+</html>

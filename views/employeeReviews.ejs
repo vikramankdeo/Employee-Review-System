@@ -1,0 +1,54 @@
+<!-- employeeReviews.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Reviews</title>
+  <link rel="stylesheet" href="/css/admin_emp_reviews.css">
+</head>
+<body>
+  <h1>Employee Reviews</h1>
+  <% if (employeeReviews && employeeReviews.length > 0) { %>
+    <ul>
+      <% employeeReviews.forEach(review => { %>
+        <li>
+          <strong>Review ID:</strong> <%= review._id %><br>
+          <strong>Employee Name:</strong> <%= review.emp_id.name %><br>
+          <strong>Reviewer Name:</strong> <%= review.reviewer_id.name %><br>
+          <div id="review_<%= review._id %>">
+          <% if (review.review && review.review.length > 0) { %>
+            <strong>Review:</strong> <%= review.review %><br>
+          <% } else { %>
+            <p>No reviews available.</p>
+          <% } %>
+          </div>
+          
+          <!-- Dropdown for changing review -->
+          <label for="changeReview">Change Review:</label>
+          <select id="changeReview_<%= review._id %>" name="changeReview" required>
+            <option value="">Select Review</option>
+            <option value="great">Great</option>
+            <option value="good">Good</option>
+            <option value="Better">Better</option>
+            <option value="bad">Bad</option>
+            <option value="">Remove Review</option>
+            <!-- Add other options as needed -->
+          </select>
+          
+          <!-- Button to change review -->
+          <button onclick="changeReview('<%=review._id%>')">Change Review</button>
+        
+          <hr>
+          <hr>
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No reviews available.</p>
+  <% } %>
+
+  <script src = "/js/admin_emp_review.js">
+    
+  </script>
+</body>
+</html>

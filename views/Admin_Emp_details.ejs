@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Home</title>
+  <link rel="stylesheet" href="/css/admin_home.css">
+
+</head>
+<body>
+  <h1 class = "heading">EMPLOYEES</h1>
+  <div class = "Add_Button_addEmployee">
+    <a href="/Admin/Add-Employee/page/" class="button-like">Add Employee</a>
+  </div>
+  <div class = "Add_Button_Assign">
+    <a href="/Admin/check/" class="button-like" target="_blank">Assign</a>
+  </div>
+  <ul>
+    <% Employee.forEach((Employee) => { %>
+    <div class="employee" id = "<%= Employee.id %>">
+      <li>
+        <!-- Display project details -->
+        <a class = "employee_name" href="/Admin/show-reviews/<%=Employee.id%>"><strong>Name:</strong> <%= Employee.name %></a><br>
+        <strong class = "employee_disc">Description:</strong> <%= Employee.username %><br>
+        <strong class = "employee_disc">Created At:</strong> <%= Employee.createdAt %><br>
+        <button class="remove-btn" onclick="removeEmployee('<%= Employee.id %>')">Remove</button>
+        <!-- Add other fields as needed -->
+        <a href="/Admin/Update-Employee/<%= Employee.id %>" class="button-like">Update Employee</a>
+      </li>
+    </div>
+    <% }); %>
+
+  </ul>
+  <script src="/js/script.js"></script>
+</body>
+</html>
